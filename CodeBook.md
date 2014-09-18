@@ -102,6 +102,6 @@ Activity labels:
 
 #DATA TRANSFORMATIONS
 
-*Dataset*  contains all variables and it is properly labelled
-*DataMeanStd* is the result of subsetting *Dataset* with just mean and std. dev. measures
-*Tidy.Avg.Data* is a skinny dataframe that results from melting *Dataset* and then taking the average 
+*Dataset*  contains all variables and it is properly labelled 
+*DataMeanStd* is the result of subsetting *Dataset* with just mean and std. dev. measures (this yields TidyData.txt)
+*Tidy.Avg.Data* is a skinny dataframe that results from melting *Dataset* and then taking the average of the variables (this yields tidy_avg_data.txt)

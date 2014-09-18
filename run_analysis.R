@@ -33,7 +33,9 @@
 
 
         #0. READ THE DATA
-datadir  <- "/Users/pelayogonzalez/Desktop/Coursera/Getting_Cleaning_Data/data/run_data" # Path to Data directory
+#Please set your working directory with data in the next line. It should contain a test and a train folder.
+setwd("/Users/pelayogonzalez/Desktop/Coursera/Getting_Cleaning_Data/data/run_data") #Replace this working directory with yours
+datadir  <- getwd()  # Path to Data directory
 testdir  <- paste(datadir, "test", sep="/") # Complete the path to test folder
 traindir <- paste(datadir, "train", sep="/") # Complete the path to train folder
 
@@ -83,4 +85,4 @@ if (!require("reshape2")) {
 Melt.Data = melt(Dataset, id.vars = c("Subject.id", "Label.act"))
 Tidy.Avg.Data = dcast(Melt.Data, formula = Subject.id + Label.act ~ variable, mean)
 
-write.table(Tidy.Avg.Data, paste(datadir,"/tidy_avg_data.txt",sep=""), sep = ";")
+write.table(Tidy.Avg.Data, paste(datadir,"/tidy_avg_data.txt",sep=""), sep = ";", row.name=FALSE )
